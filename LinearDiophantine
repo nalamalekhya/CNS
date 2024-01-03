@@ -74,6 +74,8 @@ public class lab3 {
 	    l7.setText("The particular solution is ("+g1+","+g2+")");
         l8.setText("The general solution is:("+g1+"+k*"+g3+","+g2+"-k*"+g4+")");
 	  
+	   }else {
+		   System.out.println("no solutions");
 	   }
 	   }
 
