@@ -1,1 +1,83 @@
+import java.awt.event.ActionEvent;
 
+import java.awt.event.ActionListener;
+
+
+
+import javax.swing.*;    
+
+public class Gcd {  
+
+public static void main(String[] args) {  
+
+    JFrame f=new JFrame("GCD EXAMPLE");  
+
+    JButton b=new JButton("GCD");  
+
+    b.setBounds(50,150,95,30);
+
+    JTextField tf1=new JTextField();
+
+    JTextField tf2=new JTextField();
+
+    JLabel l2=new JLabel();
+
+    tf1.setBounds(50,50, 50,20);
+
+    tf2.setBounds(50,100, 50,20);
+
+    b.addActionListener(new ActionListener(){  
+
+    public void actionPerformed(ActionEvent e){
+
+    String a=tf1.getText();
+
+    String b=tf2.getText();
+
+    int r1=Integer.parseInt(a);
+
+    int r2=Integer.parseInt(b);
+
+    int q,r;
+
+    while(r2>0) {
+
+    q=r1/r2;
+
+    r=r1-q*r2;
+
+    r1=r2;
+
+    r2=r;
+
+   
+
+    }
+
+    String s=String.valueOf(r1);  
+
+               l2.setText("GCD:"+s);  
+
+           }  
+
+       });      
+
+    f.add(tf1);
+
+    l2.setBounds(50,280, 150,20);
+
+    f.add(tf2);
+
+    f.add(l2);
+
+    f.add(b);  
+
+    f.setSize(400,400);  
+
+    f.setLayout(null);  
+
+    f.setVisible(true);  
+
+}  
+
+}  
