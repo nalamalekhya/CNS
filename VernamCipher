@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class VernamCipher {
+	
+	static int Encryption(String key,String plaintext) {
+		int cipherText=0;
+		for(int i=0;i<key.length();i++) {
+			
+			
+				cipherText=(int)key.charAt(i)^(int)plaintext.charAt(i);
+				
+				cipherText=65+cipherText;
+				System.out.print((char)cipherText);
+				
+			
+			
+		}
+		return cipherText;
+		
+		
+		
+	}
+	static void Decryption(int cipherText,String key) {
+		System.out.println("Decryption");
+	}
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		String key=sc.next();
+		String plaintext=sc.next();
+		
+		
+		int b=Encryption(key,plaintext);
+		Decryption(b,key);
+	}
+
+}
